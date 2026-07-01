@@ -3,7 +3,7 @@
  * Spec ref: Sección 10 (Pantallas), Sección 7 (Funcionalidades)
  */
 
-const API = "http://localhost:8000";
+const API = "https://visionmovimientobackend.onrender.com";
 
 async function verificarSistema() {
   try {
