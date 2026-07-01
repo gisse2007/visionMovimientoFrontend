@@ -2,7 +2,7 @@
  * recognition.js — Modo dual: local (stream) y nube (base64)
  */
 
-const API = "https://visionmovimientobackend.onrender.com"; // Cambia esto después por la URL de Render
+const API = "http://localhost:8000";
 const POLL_MS = 300;
 
 let pollingInterval = null;

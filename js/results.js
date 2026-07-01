@@ -3,7 +3,7 @@
  * Spec ref: Sección 7 (Historial), Sección 12 (Persistencia local)
  */
 
-const API = "https://visionmovimientobackend.onrender.com";
+const API = "http://localhost:8000";
 
 async function cargarEstadisticas() {
   try {
