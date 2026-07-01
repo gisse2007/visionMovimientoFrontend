@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movimiento — Reconocimiento de Baile</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="page page--home">
+
+    <header class="header">
+      <div class="header__logo">🕺 VisiónMovimiento</div>
+      <div class="header__status" id="statusBadge">
+        <span class="dot dot--off"></span> Desconectado
+      </div>
+    </header>
+
+    <main class="hero">
+      <h1 class="hero__title">Reconocimiento de Baile<br /><span>con Visión Artificial</span></h1>
+      <p class="hero__subtitle">
+        Detección de postura en tiempo real con MediaPipe y TensorFlow.<br />
+        Muévete y el sistema te evalúa.
+      </p>
+
+      <div class="hero__actions">
+        <button class="btn btn--primary" id="btnIniciar">
+          🎥 Iniciar Cámara
+        </button>
+        <a href="recognition.html" class="btn btn--secondary" id="btnReconocer">
+          🕺 Ir a Reconocimiento
+        </a>
+        <a href="results.html" class="btn btn--ghost">
+          📊 Ver Historial
+        </a>
+      </div>
+
+      <div class="system-info" id="systemInfo">
+        <div class="system-info__item">
+          <span class="label">Cámara</span>
+          <span class="value" id="infoCamera">—</span>
+        </div>
+        <div class="system-info__item">
+          <span class="label">Modelo</span>
+          <span class="value" id="infoModelo">—</span>
+        </div>
+        <div class="system-info__item">
+          <span class="label">Clases</span>
+          <span class="value" id="infoClases">—</span>
+        </div>
+        <div class="system-info__item">
+          <span class="label">Registros</span>
+          <span class="value" id="infoRegistros">—</span>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      MediaPipe · TensorFlow · FastAPI · OpenCV
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

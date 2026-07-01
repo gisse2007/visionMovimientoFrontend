@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resultados — MovimientoAI</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="page page--results">
+
+    <header class="header">
+      <a href="recognition.html" class="btn btn--ghost btn--sm">← Reconocimiento</a>
+      <div class="header__logo">📊 Resultados</div>
+      <a href="index.html" class="btn btn--ghost btn--sm">Inicio</a>
+    </header>
+
+    <main class="results-layout">
+
+      <!-- Estadísticas generales -->
+      <section class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-card__value" id="statTotal">—</div>
+          <div class="stat-card__label">Total registros</div>
+        </div>
+        <div class="stat-card stat-card--green">
+          <div class="stat-card__value" id="statReconocidos">—</div>
+          <div class="stat-card__label">Reconocidos</div>
+        </div>
+        <div class="stat-card stat-card--blue">
+          <div class="stat-card__value" id="statConfianza">—</div>
+          <div class="stat-card__label">Confianza prom.</div>
+        </div>
+        <div class="stat-card stat-card--purple">
+          <div class="stat-card__value" id="statFrecuente">—</div>
+          <div class="stat-card__label">Más frecuente</div>
+        </div>
+      </section>
+
+      <!-- Distribución por movimiento -->
+      <section class="card">
+        <div class="card__label">Distribución por movimiento</div>
+        <div id="movDistribution" class="mov-distribution">
+          <p class="muted">Sin datos aún</p>
+        </div>
+      </section>
+
+      <!-- Historial completo -->
+      <section class="card">
+        <div class="card__header">
+          <div class="card__label">Historial completo</div>
+          <button class="btn btn--danger btn--sm" id="btnLimpiar">🗑 Limpiar</button>
+        </div>
+        <div class="table-wrapper">
+          <table class="history-table" id="historyTable">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Timestamp</th>
+                <th>Movimiento</th>
+                <th>Confianza</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody id="historyBody">
+              <tr><td colspan="5" class="muted center">Sin registros</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="js/results.js"></script>
+</body>
+</html>

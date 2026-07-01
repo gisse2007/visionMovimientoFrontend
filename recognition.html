@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reconocimiento — MovimientoAI</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="page page--recognition">
+
+    <header class="header">
+      <a href="index.html" class="btn btn--ghost btn--sm">← Inicio</a>
+      <div class="header__logo">🕺 MovimientoAI</div>
+      <div class="header__status" id="statusBadge">
+        <span class="dot dot--off"></span> Desconectado
+      </div>
+    </header>
+
+    <main class="recognition-layout">
+
+      <!-- Panel de video -->
+      <section class="video-panel">
+        <div class="video-wrapper">
+          <img
+            id="videoStream"
+            src=""
+            alt="Stream de video"
+            class="video-stream"
+          />
+          <div class="video-overlay" id="videoPlaceholder">
+            <div class="video-overlay__icon">📷</div>
+            <p>Cámara no activa</p>
+            <button class="btn btn--primary btn--sm" id="btnActivarCam">
+              Activar Cámara
+            </button>
+          </div>
+          <!-- Indicador de visibilidad -->
+          <div class="visibility-badge" id="visibilityBadge">
+            <span id="visibilityText">Sin señal</span>
+          </div>
+        </div>
+
+        <!-- Controles de cámara -->
+        <div class="controls">
+          <button class="btn btn--primary" id="btnIniciarCam">🎥 Iniciar</button>
+          <button class="btn btn--danger" id="btnDetenerCam">⏹ Detener</button>
+          <button class="btn btn--success" id="btnIniciarRec" disabled>▶ Reconocer</button>
+          <button class="btn btn--warning" id="btnDetenerRec" disabled>⏸ Pausar</button>
+        </div>
+      </section>
+
+      <!-- Panel de resultados en tiempo real -->
+      <section class="results-panel">
+
+        <!-- Movimiento principal -->
+        <div class="card card--highlight">
+          <div class="card__label">Movimiento Detectado</div>
+          <div class="card__value card__value--big" id="movimientoActual">—</div>
+          <div class="confidence-bar">
+            <div class="confidence-bar__fill" id="confidenceFill" style="width: 0%"></div>
+          </div>
+          <div class="card__sub" id="confidenceText">Confianza: 0%</div>
+        </div>
+
+        <!-- Probabilidades por clase -->
+        <div class="card">
+          <div class="card__label">Probabilidades</div>
+          <div id="probList" class="prob-list">
+            <p class="muted">Esperando datos del modelo...</p>
+          </div>
+        </div>
+
+        <!-- Botón registrar -->
+        <button class="btn btn--primary btn--full" id="btnRegistrar" disabled>
+          💾 Registrar en Historial
+        </button>
+
+        <!-- Mini historial de sesión -->
+        <div class="card">
+          <div class="card__label">Últimos movimientos</div>
+          <ul class="mini-history" id="miniHistory">
+            <li class="muted">Sin datos aún</li>
+          </ul>
+        </div>
+
+        <a href="results.html" class="btn btn--ghost btn--full">📊 Ver historial completo</a>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="js/recognition.js"></script>
+</body>
+</html>
